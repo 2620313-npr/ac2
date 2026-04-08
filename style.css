@@ -1,0 +1,260 @@
+/* 기본 초기화 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", system-ui, sans-serif;
+  background-color: #f5f5f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 앱 전체 */
+.app {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px 16px 30px;
+}
+
+/* 화면 */
+.screen {
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ===== 메인 ===== */
+.app-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.app-subtitle {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+/* 패널 */
+.panel-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.panel {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.panel:active {
+  transform: scale(0.97);
+}
+
+.panel-title {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.panel-desc {
+  font-size: 12px;
+  color: #888;
+}
+
+.panel-icon {
+  font-size: 18px;
+}
+
+/* ===== 상단바 ===== */
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.top-title {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* 버튼 */
+.back-button,
+.add-button,
+.reset-button,
+.edit-button {
+  height: 32px;
+  border-radius: 999px;
+  border: none;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  cursor: pointer;
+}
+
+.back-button {
+  width: 32px;
+}
+
+.add-button {
+  width: 32px;
+  margin-left: auto;
+}
+
+.reset-button {
+  width: 32px;
+  margin-left: auto;
+}
+
+.edit-button {
+  padding: 0 10px;
+  margin-left: auto;
+}
+
+/* ===== 카드 ===== */
+.routine-body.card {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.routine-body.clear {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.routine-placeholder {
+  font-size: 13px;
+  color: #777;
+}
+
+/* ===== 루틴 카드 ===== */
+.routine-item {
+  background: white;
+  border-radius: 14px;
+  padding: 14px;
+  margin-top: 10px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+  cursor: pointer;
+}
+
+.routine-item-title {
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.routine-item-summary {
+  font-size: 12px;
+  color: #777;
+}
+
+/* ===== 입력 패널 ===== */
+.panel-box {
+  background: white;
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.panel-label {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.panel-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.panel-input:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.center {
+  text-align: center;
+}
+
+/* 속도 시간 */
+#speed-time-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.speed-time-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.divider {
+  font-weight: 800;
+}
+
+/* 버튼 */
+.circle-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: none;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  cursor: pointer;
+}
+
+/* 저장 */
+.save-btn {
+  width: 100%;
+  background: #111;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.save-btn:active {
+  opacity: 0.7;
+}
+
+/* 운동량 */
+.exercise-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#exercise-summary-value {
+  font-size: 13px;
+  color: #555;
+}
+
+/* ===== 반응형 ===== */
+@media (max-width: 500px) {
+  body {
+    align-items: flex-start;
+  }
+}
