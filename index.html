@@ -1,0 +1,131 @@
+
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>운동 기록</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- 🔥 JS defer 추가 -->
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app">
+
+    <!-- 🏠 메인창 -->
+    <div class="screen" id="home-screen">
+      <div class="app-title">운동 기록</div>
+      <div class="app-subtitle">헬스장에서 바로 기록하는 간단 웹</div>
+
+      <div class="panel-wrapper">
+        <div class="panel" id="routine-panel">
+          <div class="panel-main">
+            <div class="panel-title">운동루틴</div>
+            <div class="panel-desc">내 루틴 저장</div>
+          </div>
+          <div class="panel-icon">📋</div>
+        </div>
+
+        <div class="panel" id="log-panel">
+          <div class="panel-main">
+            <div class="panel-title">운동측정</div>
+            <div class="panel-desc">기록하기</div>
+          </div>
+          <div class="panel-icon">✅</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 📝 운동루틴창 -->
+    <div class="screen hidden" id="routine-screen">
+      <div class="top-bar">
+        <button class="back-button" id="back-from-routine">←</button>
+        <div class="top-title">운동루틴</div>
+        <button class="edit-button" id="edit-routine-btn">편집</button>
+        <button class="add-button" id="go-add-routine">＋</button>
+      </div>
+
+      <div class="routine-body card">
+        <p class="routine-placeholder">
+          루틴을 추가해보세요
+        </p>
+      </div>
+
+      <div id="routine-list"></div>
+    </div>
+
+    <!-- ➕ 루틴추가 -->
+    <div class="screen hidden" id="add-routine-screen">
+      <div class="top-bar">
+        <button class="back-button" id="back-from-add">←</button>
+        <div class="top-title">루틴추가</div>
+        <button class="reset-button" id="reset-routine-btn">⟲</button>
+      </div>
+
+      <div class="routine-body clear">
+        <div class="panel-box">
+          <label class="panel-label">루틴 제목</label>
+          <input
+            type="text"
+            id="routine-title-input"
+            class="panel-input"
+            placeholder="루틴 이름"
+          />
+        </div>
+
+        <div class="panel-box">
+          <label class="panel-label">속도 · 시간</label>
+
+          <div id="speed-time-list">
+            <div class="speed-time-row">
+              <input
+                type="number"
+                id="speed-input"
+                class="panel-input center speed-input"
+                placeholder="속도"
+              />
+              <span class="divider">:</span>
+              <input
+                type="number"
+                id="time-input"
+                class="panel-input center time-input"
+                placeholder="시간"
+              />
+              <button
+                type="button"
+                class="circle-btn add-segment-btn"
+                id="add-speed-time-btn"
+              >
+                ＋
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <button class="save-btn" id="routine-save-btn">저장</button>
+
+        <div class="panel-box">
+          <label class="panel-label">운동량</label>
+          <div class="exercise-summary-row">
+            <div id="exercise-summary-value">
+              운동량 계산되지 않음
+            </div>
+            <button id="check-summary-btn">✓</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 상세 -->
+    <div class="screen hidden" id="routine-detail-screen">
+      <div class="top-bar">
+        <button class="back-button" id="back-from-detail">←</button>
+        <div class="top-title" id="detail-title">루틴 상세</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
